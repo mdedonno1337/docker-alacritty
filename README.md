@@ -6,3 +6,5 @@ The outputted binary is placed in the current directory after build.
 
 Building the binary this way has the avantages of building the alacritty terminal from source and remove more than 30Mo (from the original 40Mo) from the final binary.
 
+Docker is only needed to build the binary, not to run the binary itself.
+
