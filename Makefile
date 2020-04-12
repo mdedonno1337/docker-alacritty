@@ -16,3 +16,8 @@ clean:
 	docker rmi -f alacritty
 	docker rmi -f rust
 
+master:
+	sed '/checkout/d' Dockerfile > Dockerfile.master
+	docker build -f Dockerfile.master -t alacritty .
+	$(MAKE) copy
+
