@@ -9,7 +9,8 @@ build:
 
 copy:
 	docker run --rm -v $(DIR):/out -u $(CURRENT_UID):$(CURRENT_GID) alacritty cp target/release/alacritty /out
-	ls -la
+	ls -la alacritty
+	./alacritty --version
 
 clean:
 	docker rmi -f alacritty
