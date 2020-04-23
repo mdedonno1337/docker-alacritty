@@ -1,6 +1,6 @@
 DIR := ${CURDIR}
-CURRENT_UID := $(shell id -u)
-CURRENT_GID := $(shell id -g)
+CURRENT_UID := $$(id -u)
+CURRENT_GID := $$(id -g)
 
 all: build copy
 
