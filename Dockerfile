@@ -7,7 +7,7 @@ RUN git clone https://github.com/alacritty/alacritty.git /tmp/alacritty
 
 WORKDIR /tmp/alacritty
 
-RUN git checkout $(git describe --tags $(git rev-list --tags --max-count=1)) -b latest
+RUN git checkout tags/$(git describe --tags $(git rev-list --tags --max-count=1)) -b latest
 
 RUN RUSTFLAGS='-C link-arg=-s' cargo build --release
 
