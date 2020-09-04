@@ -33,3 +33,6 @@ check:
 	@alacritty --version | sed -e "s/^alacritty\s//g"
 	@echo ""
 
+install: build copy
+	cp ./alacritty /usr/local/bin/alacritty
+	
