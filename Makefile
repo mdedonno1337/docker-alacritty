@@ -5,7 +5,7 @@ CURRENT_GID := $$(id -g)
 all: build copy
 
 build:
-	docker build -t alacritty .
+	docker build --no-cache -t alacritty .
 
 copy:
 	docker run --rm -v $(DIR):/out -u $(CURRENT_UID):$(CURRENT_GID) alacritty cp target/release/alacritty /out
